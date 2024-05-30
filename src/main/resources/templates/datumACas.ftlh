@@ -1,4 +1,4 @@
-<!-- Tady jsme teď v čistém HTML, zatím žádné „[#ftl]“ -->
+[#ftl]
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -18,15 +18,15 @@
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <!-- Třídy z Bootstrapu, které vytvoří menu. Třída „active“ označuje aktuální stránku – na stránkách pro datum a čas bude na odpovídajícíh položkách.-->
         <ul class="nav nav-pills">
-            <li class="nav-item"><a class="nav-link active" href="/">Úvod</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Úvod</a></li>
             <li class="nav-item"><a class="nav-link" href="/datum">Datum</a></li>
             <li class="nav-item"><a class="nav-link" href="/cas">Čas</a></li>
-            <li class="nav-item"><a class="nav-link" href="/datumACas">Datum a čas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/datumACas">Datum a čas</a></li>
         </ul>
     </header>
     <!-- Třídy Bootstrapu, zajistí centrování textu. -->
     <div class="px-4 py-5 my-5 text-center">
-        <div>Vyberte si, zda chcete zobrazit datum nebo čas.</div>
+        <h1 class="display-1 fw-bold">Teď je ${datumACasDatum ?date ?string.long} ${datumACasCas ?time ?string.short}.</h1>
     </div>
 </div>
 <script crossorigin="anonymous"
